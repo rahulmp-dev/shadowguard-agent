@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shadowguard"
+version = "1.0.0"
+description = "ShadowGuard-Agent: Autonomous AI code governance pipeline for detecting architectural anti-patterns in AI-generated code."
+readme = "docs/ARCHITECTURE.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "Rahul M P"},
+]
+keywords = ["security", "governance", "ai-code-review", "ast", "langgraph", "devsecops"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "langgraph>=0.2.0",
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+    "typing-extensions>=4.8.0",
+]
+
+[project.scripts]
+shadowguard = "shadowguard.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["shadowguard"]

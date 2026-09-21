@@ -1,0 +1,25 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Builds and Distributions
+build/
+dist/
+*.egg-info/
+
+# Secrets and Local Configs
+.env
+.env.local
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
